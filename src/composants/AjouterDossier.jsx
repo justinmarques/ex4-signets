@@ -47,13 +47,14 @@ export default function AjouterDossier({ouvert, setOuvert, gererAjout}) {
             triangle="hide" 
             onChangeComplete={(couleur, e) => setCouleur(couleur.hex)}
             color={couleur}
+            colors={['#FF6900', '#FCB900', '#7BDCB5', '#00D084', '#8ED1FC', '#0693E3']}
           />
         </DialogContent>
-        <DialogActions>
-          <Button onClick={()=>{setOuvert(false); viderChamps()}} color="primary">
+        <DialogActions style={{margin:'1em 0 1em 0'}}>
+          <Button onClick={()=>{setOuvert(false); viderChamps()}} style={{backgroundColor:'#E72112', color:'white'}}>
             Annuler
           </Button>
-          <Button onClick={() => {nom !== '' && gererAjout(nom, couverture, couleur); viderChamps(); }} color="primary">
+          <Button onClick={() => {nom !== '' && gererAjout(nom, couverture, couleur); viderChamps(); }} style={{backgroundColor:'#37D262', color:'white'}}>
             Ajouter
           </Button>
         </DialogActions>
